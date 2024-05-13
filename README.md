@@ -1,9 +1,11 @@
 # SQL_PROJECTS_NAMMA_YATRI_APP
 
 --Total number of trips?
+
 select count(distinct tripid) no_of_trip from trips
 
 --For the above to check any duplicates?     THE RESULT SHOWS THERE ARE NO DUPLICATES
+
 select tripid, count(tripid) as cnt from trips_details4
 group by tripid having count(tripid)>1 
 
